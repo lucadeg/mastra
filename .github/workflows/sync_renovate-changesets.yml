@@ -1,12 +1,8 @@
+
 name: Sync Renovate changeset
 on:
-  pull_request:
-    paths:
-      - '.github/workflows/sync_renovate-changesets.yml'
-      - '**/pnpm-lock.yaml'
-      - 'examples/**/package.json'
-      - 'e2e-tests/**/package.json'
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   changeset:
     runs-on: ubuntu-latest

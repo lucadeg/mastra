@@ -1,3 +1,4 @@
+
 name: Trigger Cloud Integration Tests
 
 permissions:
@@ -5,11 +6,7 @@ permissions:
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-      - 0.x
-
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   trigger:
     # Only run on the main repository, not on forks

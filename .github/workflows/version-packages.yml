@@ -1,3 +1,4 @@
+
 name: Version Packages
 
 permissions:
@@ -5,10 +6,8 @@ permissions:
   pull-requests: write
 
 on:
-  push:
-    branches:
-      - main
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   version:
     # Only run on the main repository, not on forks

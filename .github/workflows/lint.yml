@@ -1,10 +1,9 @@
+
 name: Quality assurance
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
-    branches: [main, 0.x]
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true

@@ -1,16 +1,12 @@
+
 name: Workspace Tests
 
 permissions:
   contents: read
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - 'workspaces/**'
-      - 'packages/core/**'
-      - '.github/workflows/test-workspaces.yml'
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true

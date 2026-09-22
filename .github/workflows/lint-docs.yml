@@ -1,3 +1,4 @@
+
 name: Lint Docs
 
 permissions:
@@ -5,8 +6,8 @@ permissions:
   pull-requests: write
 
 on:
-  pull_request:
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true

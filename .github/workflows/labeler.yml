@@ -1,3 +1,4 @@
+
 name: Labeler
 
 permissions:
@@ -5,8 +6,8 @@ permissions:
   pull-requests: write
 
 on:
-  - pull_request_target
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   labeler:
     runs-on: ubuntu-latest
